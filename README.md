@@ -98,3 +98,19 @@ curl -i http://localhost:8000/api/buku/999999
 |---|---|
 | `ModuleNotFoundError: app` | jalankan uvicorn dari folder `backend/` |
 | port 8000 bentrok | pakai `--port 8001` |
+
+## Bukti screenshot `/docs`
+
+### POST /api/buku → 201 Created
+
+Request body valid, server membalas `201` dan mengirim header `Location`.
+
+![POST 201](docs/post-201.png)
+
+### POST /api/buku → 422 (ISBN tidak 13 digit)
+
+![POST 422](docs/post-422.png)
+
+### GET /api/buku/9999 → 404 Not Found
+
+![GET 404](docs/get-404.png)
